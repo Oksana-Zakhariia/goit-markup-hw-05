@@ -26,12 +26,12 @@
                 <li class="item">
             
                      <a class="site-header-contact" href="mailto:info@devstudio.com" lang="en">
-                        <svg class="mail-svg">
+                        <svg class="mail-svg" width="16" height="12">
                             <use href="./images/icons-svg.svg#icon-letter">                   </use>
                         </svg>
                         info@devstudio.com</a></li>
                 <li class="item"> <a class="site-header-contact" href="tel:+380961111111">
-                    <svg class="phone-svg">
+                    <svg class="phone-svg" width="10" height="16">
                         <use href="./images/icons-svg.svg#icon-phone"></use>
 
                     </svg>
@@ -44,7 +44,7 @@
         <section class="site-hero overlay">
             <div class="container">
                 <h1 class="site-hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="site-hero-button">Заказать услугу</button>
+                <button data-modal-open type="button" class="site-hero-button" >Заказать услугу</button>
             </div>
                 
             
@@ -95,13 +95,27 @@
             </div>
             
         </section>
+        <div data-modal class="backdrop is-hidden" >
+            <div class="modal">
+                <button data-modal-close class="modal-button-close" > X </button>
+            </div>
+        </div>
         <section class="work-section section">
             <div class="container">
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="work-list list">
-                    <li class="work-item"><img src="./images/pic.1.jpg" alt="програмирование" width="370"></li>
-                    <li class="work-item"><img src="./images/pic.2.jpg" alt="дизайн" width="370"></li>
-                    <li class="work-item"><img src="./images/pic.3.jpg" alt="работа с цветом" width="370"></li>
+                    <li class="work-item">
+                        <img src="./images/pic.1.jpg" alt="програмирование" width="370">
+                        <h4 class="work-description">Десктопные приложения</h4>
+                    </li>
+                    <li class="work-item">
+                        <img src="./images/pic.2.jpg" alt="дизайн" width="370">
+                        <h4 class="work-description">Мобильные приложения</h4>
+                    </li>
+                    <li class="work-item">
+                        <img src="./images/pic.3.jpg" alt="работа с цветом" width="370">
+                        <h4 class="work-description">Дизайнерские решения</h4>
+                    </li>
                 </ul>
 
             </div>
@@ -381,6 +395,11 @@
         
         
      </footer>
+     
+     
+    <script src="./js/modal.js"></script>
+
+
    
     
 </body>
