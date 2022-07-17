@@ -15,6 +15,7 @@
     --portfolio-projects-bg-color:rgba(33, 150, 243, 0.9);
     --backdrop-bg-col:rgba(0, 0, 0, 0.2);
     --work-descr-bg-col:rgba(47, 48, 58, 0.8);
+    --timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -132,17 +133,23 @@ margin-bottom: 25px;
 }
 .site-nav-link-current {
     display: block;
+    position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
     color: var(--accent-color);
 }
 
 .site-nav-link-current::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
     width: 100%;
     height: 4px ; 
     border-radius: 2px;
     background-color: var(--accent-color);
-    position: absolute;
+  
 }
 .mail-svg{
     width: 16px;
@@ -336,8 +343,16 @@ line-height: 1.7;
     height: 30px;
     border-radius: 50%;
     cursor: pointer;
+   border-color: rgba(0, 0, 0, 0.1);
+   background-color: var(--white-color);
 }
-
+.cross-svg{
+    position: absolute;
+    fill: var(--black-color);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 .work-section{ 
     padding-top: 0;
     padding-bottom: 94px;
@@ -427,6 +442,7 @@ line-height: 1.7;
     color:var(--icons-color);
     align-items: center;
     border-radius: 50%;
+    transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 
 }
 
@@ -540,23 +556,46 @@ background-color: var(--grey-bacground-color);
 
 }
 
-/* прописала ще раз, бо сторінка гітхабу не хотіла змінювати колір */
-.project-link>.project-description{
-    color: var(--primary-text-color);
+.project-title{
+    color: var(--title-text-color);
+    margin-bottom: 4px;
+    line-height: 2;
 }
-
 
 .project-card{
     margin-right: 30px;
     margin-bottom: 30px;
-    flex-basis: calc(100%/3-30px); 
+    flex-basis: calc(100%/3-30px);    
+      
 }
- /*.project-card:nth-child(3n){
-    margin-right: 0px;
+.project-card:hover .project-overlay{
+opacity: 1;
+transform: translateY(0);
 }
-.project-card:nth-last-child(-n+3){
-    margin-bottom: 0px;
-}*/
+
+.project-thumb{
+    position: relative;
+    overflow: hidden;
+}
+ .project-overlay{  
+display: block;
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+background-color: var(--portfolio-projects-bg-color);
+opacity: 0;
+transition: opacity 250ms var(--timing-function);
+transition: transform 250ms var(--timing-function);
+transform: translateY(100%);
+ }
+.project-cover {
+padding: 63px 24px;
+color: var(--white-color);
+font-size: 18px;
+line-height: calc(28/18);
+opacity: 1;}
 
 
 .project-title{
@@ -566,12 +605,9 @@ line-height:2 ;
 letter-spacing: 0.06em;
 background-color: var(--white-color);
 margin-bottom: 4px;
+  
 }
-.project-thumb{
-    position: relative;
-     
-}
-.project-thumb::before{
+ /*.project-thumb::before{
     content:"" ;
     display: inline-block;
     position: absolute;
@@ -579,28 +615,10 @@ margin-bottom: 4px;
     height: 100%;
     background-color:var(--portfolio-projects-bg-color);
     opacity: 0;
-       
+    transform: translateY(100%);
+    transition: opacity 250ms var(--timing-function);
+    transition: transform 250ms var(--timing-function);*/
 
-}
-.project-thumb:hover::before{
-    content: "";
-    opacity: 1;
-    display: inline-block;
-    position: absolute;
-}
-.project-cover{
-    position: absolute;
-    left:0 ;
-    top: 0;
-    padding: 63px 24px;
-    color: var(--white-color);
-    font-size: 18px;
-    line-height: calc(28/18);
-    opacity: 0;
-}
-.project-cover:hover{
-    opacity: 1;
-}
 
 .project-card-description {
     padding-left: 24px;
@@ -683,14 +701,16 @@ margin-bottom: 4px;
 
 .footer-social-link{
     width: 44px;
-        height: 44px;
-        display: flex;
-        justify-content: center;
-        color:var(--white-color);
-        align-items: center;
-        border-radius: 50%;
-        background-color: var(--footer-social-link-bg-color);
-        }
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    color:var(--white-color);
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--footer-social-link-bg-color);
+    transition: background-color 250ms var(--timing-function);
+     
+ }
 .footer-social-link-item:not(:last-child){
     margin-right: 10px;
 }
