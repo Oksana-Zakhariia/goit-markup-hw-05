@@ -317,6 +317,7 @@ line-height: 1.7;
     background-color: var(--backdrop-bg-col);
     opacity: 1;
     transition: opacity 250ms var(--timing-function) ;
+    z-index: 999;
 
 }
 .backdrop.is-hidden {
@@ -333,6 +334,7 @@ line-height: 1.7;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--timing-function);
+    z-index: 3;
 
 
     width: 581px;
@@ -370,6 +372,7 @@ line-height: 1.7;
 .work-item{ 
     flex-basis: calc((100%-60px)/3); 
     position: relative;
+
      
 }
 .work-item:not(:last-child){
@@ -564,11 +567,6 @@ background-color: var(--grey-bacground-color);
 
 }
 
-.project-title{
-    color: var(--title-text-color);
-    margin-bottom: 4px;
-    line-height: 2;
-}
 
 .project-card{
     margin-right: 30px;
