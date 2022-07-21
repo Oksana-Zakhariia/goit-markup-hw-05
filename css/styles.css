@@ -343,6 +343,7 @@ line-height: 1.7;
     height: 581px;
     
     background-color: var(--white-color);
+    padding: 40px;
 }
 .modal-button-close{
     position: absolute;
@@ -356,12 +357,55 @@ line-height: 1.7;
    border-color: rgba(0, 0, 0, 0.1);
    background-color: var(--white-color);
 }
+
 .cross-svg{
     position: absolute;
     fill: var(--black-color);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: fill 250ms var(--timing-function);
+}
+.cross-svg:hover,
+.cross-svg:focus{
+    fill: var(--accent-color);
+}
+.modal-name{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--title-text-color);
+}
+.modal-label{
+    margin-bottom: 4px;
+}
+.modal-input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.modal-submit-button{
+    display:flex;
+    width: 200px;
+    height: 50px;
+   justify-content: center;
+   align-items: center;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    box-shadow:0px 4px 4px 0px rgba(0, 0, 0, 0.15) ;
+    border-color: var(--accent-color);
+    transition: bacground-color 250ms var(--timing-function);
+
+}
+.modal-submit-button:hover,
+ .modal-submit-button:focus{
+    background-color: #188CE8;
 }
 .work-section{ 
     padding-top: 0;
@@ -582,11 +626,11 @@ color: var(--black-color);
     
       
 }
-.project-card:hover .project-overlay{
-opacity: 1;
-transform: translateY(0);
+.project-link:hover .project-overlay,
+.project-link:focus .project-overlay {
+    opacity: 1;
+    transform: translateY(0);
 }
-
 .project-thumb{
     position: relative;
     overflow: hidden;
@@ -725,4 +769,56 @@ margin-bottom: 4px;
 .footer-social-link:hover,
 .footer-social-link:focus {
     background-color: var(--accent-color);
+}
+
+.footer-third-part{
+   margin-left: auto;
+}
+.footer-sign-in{
+    text-transform: uppercase;
+    color: var(--white-color);
+    line-height: 1.17;
+    margin-bottom: 20px;
+
+}
+
+.sign-up-form{
+    display: flex;
+}
+.mail-placeholder{
+display: block;
+text-align: left;
+padding-left: 16px;
+margin-right: 12px;
+width: 381px;
+height: 50px;
+background-color: inherit;
+border: 1px solid  rgba(255, 255, 255, 0.3);
+color: var(--footer-contact-color);
+border-radius: 4px;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+font-size: 16px;
+
+ 
+}
+
+.sign-in-button{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 200px;
+height: 50px;
+text-align: center;
+background-color:var(--accent-color);
+color: var(--white-color);
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 4px;
+font-size: 16px;
+font-weight: 700;
+
+}
+.submit-button-icon{
+   fill: var(--white-color);
+   margin-left: 10px;
 }
