@@ -96,36 +96,50 @@
             
         </section>
         <div data-modal class="backdrop is-hidden" >
-            <div class="modal">
-                <form action="" autocomplete="on">
+           
+            <form class="modal" action="" autocomplete="on">
                     <button data-modal-close class="modal-button-close" > 
                  <svg class="cross-svg" width="17" height="17">
                     <use href="./images/icons-svg.svg#icon-close-black"></use>
                 </svg>     
                     </button>
                     <p class="modal-name">Залиште свої дані, ми вам передзвонимо</p>
-                <div>
-                    <label class="modal-label" for="user-name">Ім'я</label>
-                    <input class="modal-input" type="text" name="user-name" id="user-name" autofocus >
-                </div>
-                <div>
-                    <label class="modal-label" for="user-phone">Телефон</label>
-                    <input class="modal-input" type="" name="user-phone" id="user-phone">
-                </div>
-                <div>
+                
+                    <label class="modal-label" for="user-name" >Ім'я</label>
+                        <div class="modal-form">
+                            <input class="modal-input" type="text" name="user-name" id="user-name" placeholder=" " >
+                            <svg class="modal-icon" width="18" height="18">
+                                <use href="./images/icons-svg.svg#icon-modal-name"></use>
+                            </svg></div>
+                                    
+            
+                     <label class="modal-label" for="user-phone">Телефон </label>
+                        <div class="modal-form">
+                            <input class="modal-input" type="tel" name="user-phone" id="user-phone">
+                            <svg class="modal-icon" width="18" height="18">
+                                <use href="./images/icons-svg.svg#icon-modal-phone"></use>
+                            </svg></div>
+                                   
+                
                     <label class="modal-label" for="user-mail">Пошта</label>
-                    <input class="modal-input" type="" name="user-mail" id="user-mail">
+                    <div class="modal-form">
+                        <input class="modal-input" type="email" name="user-mail" id="user-mail">
+                        <svg class="modal-icon" width="18" height="18">
+                            <use href="./images/icons-svg.svg#icon-modal-mail"></use>
+                        </svg></div>                                 
+                                
+                    <label class="modal-label" for="coment">Коментар</label>
+                    <textarea  class="modal-textarea" name="coment" id="coment" rows="10" placeholder="Введіть текст"></textarea>
+            
+                <div class="checkbox-form">               
+                    <input class="checkbox" type="checkbox">
+                    <label class="" for="checkbox">
+                        Погоджуюся з розсилкою та приймаю <a class="modal-link">Умови договору</a> 
+                    </label>
                 </div>
-                <div>
-                    <label class="modal-label" for="textarea">Коментар</label>
-                    <textarea  class="modal-input" name="textarea" id="textarea" cols="30" rows="10" placeholder="Введіть текст"></textarea>
-                </div>
-                <input type="checkbox">
-                <label for="checkbox">Погоджуюся з розсилкою та приймаю Умови договору</label>
                 <button class="modal-submit-button" type="submit">Відправити</button>
-                </form>
-        
-            </div>
+            </form>        
+            
         </div>
         <section class="work-section section">
             <div class="container">
@@ -152,9 +166,9 @@
             <div class="container">
                 <h2 class="section-title">Наша команда</h2>
                 <ul class="team-list list" >
-                <li class="team-item"><img src="./images/team1.jpg" alt=" фото Игорь Демьяненко " width="270">
+                <li class="team-item"><img src="./images/team1.jpg" alt=" фото Ігор Дем'яненко " width="270">
                     <div class="team-description">
-                        <h3 class="team-name">Ігор Демяненко</h3>
+                        <h3 class="team-name">Ігор Дем'яненко</h3>
                         <p class="team-profession" lang="en">Product Designer</p>
                         <ul class="social-link-list list">
                             <li class="social-link-item">
@@ -190,9 +204,9 @@
                     
                 </li>
                 <li  class="team-item">
-                    <img src="./images/team2.jpg" alt="фото Ольга Репина" width="270">
+                    <img src="./images/team2.jpg" alt="фото Ольга Рєпіна" width="270">
                     <div class="team-description">
-                        <h3 class="team-name">Ольга Репина</h3>
+                        <h3 class="team-name">Ольга Рєпіна</h3>
                         <p class="team-profession" lang="en">Frontend Developer</p>
                         <ul class="social-link-list list">
                             <li class="social-link-item">
@@ -228,9 +242,9 @@
                     
                 </li>
                 <li  class="team-item">
-                    <img src="./images/team3.jpg" alt="фото Николай Тарасов " width="270">
+                    <img src="./images/team3.jpg" alt="фото Микола Тарасов " width="270">
                     <div class="team-description">
-                        <h3 class="team-name">Николай Тарасов</h3>
+                        <h3 class="team-name">Микола Тарасов</h3>
                         <p class="team-profession" lang="en">Marketing</p>
                         <ul class="social-link-list list">
                             <li class="social-link-item">
@@ -266,9 +280,9 @@
                     
                 </li>
                 <li  class="team-item">
-                    <img src="./images/team4.jpg" alt="фото Михаил Ермаков " width="270">
+                    <img src="./images/team4.jpg" alt="фото Михайло Єрмаков " width="270">
                     <div class="team-description">
-                        <h3 class="team-name">Михаил Ермаков</h3>
+                        <h3 class="team-name">Михайло Єрмаков</h3>
                         <p class="team-profession" lang="en">UI Designer</p>
                         <ul class="social-link-list list">
                             <li class="social-link-item">
@@ -312,7 +326,7 @@
         </section>      
         <section class="clients section">
             <div class="container">
-                <h2 class="section-title">Постоянные клиенты</h2>
+                <h2 class="section-title">Постійні клієнти</h2>
                 <ul class="clients-list list">
                 
                 <li class="client-item">    
