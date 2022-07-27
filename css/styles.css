@@ -324,6 +324,7 @@ line-height: 1.7;
 }
 .backdrop.is-hidden {
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
 }
 .backdrop.is-hidden .modal{
@@ -445,10 +446,7 @@ line-height: 1.7;
 .modal-textarea:hover{
     border: 1px solid var(--accent-color);
 }
-{
-    border: 1px solid var(--accent-color);
-    outline: none;
-}
+
 
 .checkbox {
     position: absolute;
